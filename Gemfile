@@ -11,6 +11,7 @@ gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.4.1'
+gem 'bootstrap_form'
 gem 'sass-rails', '~> 5'
 gem 'jquery-rails'
 # Use Devise for authentication
