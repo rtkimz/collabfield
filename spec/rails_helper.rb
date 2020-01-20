@@ -62,6 +62,16 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  ## Adding this content according to the tutorial, not sure if this is where it goes
+  require 'capybara/poltergeist'
+  require 'factory_bot_rails'
+  require 'capybara/rspec'
+
+  config.include Devise::Test::IntegrationHelpers, type: :feature
+  config.include FactoryBot::Syntax::Methods
+  Capybara.javascript_driver = :poltergeist
+  Capybara.server = :puma 
+
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
@@ -81,16 +91,5 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
-
-  ## Adding this content according to the tutorial, not sure if this is where it goes
-  require 'capybara/poltergeist'
-  require 'factory_bot_rails'
-  require 'capybara/rspec'
-
-  config.include Devise::Test::IntegrationHelpers, type: :feature
-  config.include FactoryBot::Syntax::Methods
-  Capybara.javascript_driver = :poltergeist
-  Capybara.server = :puma 
-
 
 end
