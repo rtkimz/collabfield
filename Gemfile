@@ -60,7 +60,6 @@ group :test do
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'headless'
-  # gem 'capybara'
   gem 'poltergeist'
   gem 'database_cleaner'
   gem 'faker'
